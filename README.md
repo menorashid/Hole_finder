@@ -30,3 +30,25 @@ This detector is modified from Yolo_v2 detector made by Joseph Redmon and Alexey
 1. Just do `make` in the darknet directory.
 2. Download trained weights from google drive ([link](https://drive.google.com/a/ucdavis.edu/file/d/0B1gETrWPTbXpVnhPTDF2VmZBeTg/view?usp=sharing)) and place it in `seoho\weights`.
 3. Run `./darknet detector test seoho/cfg/seoho_large.data seoho/cfg/yolo-seoho.2.0.cfg seoho/weights/yolo-seoho_20000.weights [path_to_your_image] -thresh 0.5`. If you don't have OpenCV installed, the result will be save in `predictions.png`. 
+
+====================================
+# Update 09/25/2017
+
+### Training, validation and testing data:
+
+Seoho people provided 3516 new images. I used 70% of them as training images, 15% of them as validation images and 15% of them as testing images. Images are in directory `seoho\images`. 
+
+Note: We did not share the images in Github page. Please let me know if you are interested in the images and labels. My email address is ymzhang (at) ucdavis (dot) edu.
+
+### Detector 
+
+This detector is modified from Yolo_v2 detector made by Joseph Redmon and AlexeyAB. (https://github.com/pjreddie/darknet and https://github.com/AlexeyAB/darknet). We trained this model using pre-trained weights for the convolutional layers for Pascal VOC data. Configuration files are in `seoho\cfg`. We trained the detetor for 5000 iterations with batch size 64, and the final weights file is in google drive([link](https://drive.google.com/file/d/0B1gETrWPTbXpNkc5MGx6WExST0E/view?usp=sharing)). 
+
+### Results
+
+This new model shows average 88.43% IOU (intersection over union) and 98.86% recall(intersection over ground truth), comparing to previous model that shows average 58.19% IOU and 77.38% recall on the same validation images.
+
+### How to detect objects in your own image:
+1. Just do `make` in the darknet directory.
+2. Download trained weights from google drive ([link](https://drive.google.com/file/d/0B1gETrWPTbXpNkc5MGx6WExST0E/view?usp=sharing)) and place it in `seoho\weights`.
+3. Run `./darknet detector test_one seoho/cfg/seoho_large.data seoho/cfg/yolo-seoho.2.0.cfg seoho/weights/yolo-seoho_5000.weights [path_to_your_image]`. If you don't have OpenCV installed, the result will be save in `predictions.png`. 
