@@ -3,6 +3,7 @@
 *.csv
 *.out
 *.jpg
+*.bmp
 *.txt
 *.pyc
 darknet
