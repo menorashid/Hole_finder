@@ -9,6 +9,9 @@
 darknet
 *.png 
 
+*.weights
+darknet19_448.conv.23
+
 # OS Generated #
 .DS_Store*
 ehthumbs.db
