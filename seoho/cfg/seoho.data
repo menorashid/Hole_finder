@@ -2,4 +2,4 @@ classes= 1
 train  = seoho/cfg/train.txt
 valid  = seoho/cfg/valid.txt
 names = seoho/cfg/seoho.names
-backup = seoho/weights/
+backup = /home/SSD3/yumeng-data/weights
