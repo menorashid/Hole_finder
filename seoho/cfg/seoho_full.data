@@ -1,5 +1,0 @@
-classes= 1
-train  = seoho/cfg/train_full.txt
-valid  = seoho/cfg/train_full.txt
-names = seoho/cfg/seoho.names
-backup = seoho/weights/full
