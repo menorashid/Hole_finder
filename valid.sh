@@ -1,7 +1,7 @@
 #!/bin/bash
 
-./darknet detector recall \
+./darknet detector valid \
 				   seoho/cfg/seoho.data \
 				   seoho/cfg/yolo-seoho.2.0.cfg \
-				   yolo-seoho_5000.weights \
+				   /home/SSD3/yumeng-data/seoho_backup/new/yolo-seoho_10000.weights \
 #				   > train.log
